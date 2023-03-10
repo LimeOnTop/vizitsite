@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'vizitsite/css/uikit.css'%}"/>
+    <style>
+        .background {
+            height: 100%;
+            width: 100%;
+            filter: blur(2rem) brightness(40%);
+            scale: 1.5;
+            overflow: hidden;
+            position: fixed;
+            z-index: -100;
+        }
+
+        .animation {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid;
+            width: 0;
+            animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0%
+            }
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blinking {
+            0% {
+                border-right-color: transparent
+            }
+            50% {
+                border-right-color: white
+            }
+            100% {
+                border-right-color: transparent
+            }
+        }
+
+        .dev-text {
+            color: white;
+        }
+
+        .dev {
+            color: purple;
+        }
+
+        .btn {
+            color: white;
+            border-radius: 40px;
+            padding: 10px 30px;
+            font-size: 25px;
+            border-width: 0px;
+            background-image: linear-gradient(to right, #FC0FC0 0%, #4830F0 51%, #FC0FC0 100%);
+            background-size: 200% auto;
+            transition: .5s;
+        }
+        .about{
+            background: linear-gradient(to right, #FC0FC0 0%, #4830F0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn:hover {
+            background-position: right center;
+        }
+
+        .logo {
+            font-size: 30px;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color:white;
+            text-decoration: none;
+        }
+
+        .href {
+            background: linear-gradient(to right, #FC0FC0 0%, #4830F0 51%, #FC0FC0 100%);
+            background-size: 200% auto;
+            transition: .5s;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .href:hover{
+            background-position: right;
+        }
+
+    </style>
+</head>
+<body>
+<div class="">
+    <img class="background" src="{% static 'vizitsite/images/background.jpg'%}" alt="">
+    <div class="uk-position-top">
+        <nav class="uk-navbar-container uk-navbar-transparent uk-margin-top">
+            <div class="uk-container">
+                <div uk-navbar>
+                    <div class="uk-navbar-left">
+                        <ul class="uk-navbar-nav">
+                            <li><div class="logo uk-margin-auto-vertical"><a href="{% url 'home' %}">Konstantin <span class="href">SHCHEGLOV</span></a></div></li>
+                        </ul>
+                    </div>
+                    <div class="uk-navbar-center">
+                        <ul class="uk-navbar-nav">
+                            <li><a href="{% url 'home' %}"><span class="uk-text-large">Home</span></a></li>
+                            <li><a href="{% url 'portfolio' %}"><span class="uk-text-large">Portfolio</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav">
+                            <li>
+                                <div class="uk-margin-auto-vertical">
+                                    <button class="btn">Contact me</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+{% block content %}
+{% endblock content %}
+<script src="{% static 'vizitsite/js/uikit.js'%}"></script>
+<script src="{% static 'vizitsite/js/uikit-icons.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% extends 'vizitsite/index.html'%}
+{% load static %}
+
+{% block content %}
+<div class="uk-container uk-margin-xlarge-top">
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+         uk-slider="clsActivated: uk-transition-active; center: true">
+        <ul class="uk-slider-items uk-grid">
+            <li class="uk-width-3-4">
+                <div class="uk-panel">
+                    <img src="{% static 'vizitsite/images/photo1.png' %}" width="1800" height="1200" alt="">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                        <h3 class="uk-margin-remove">gatto.</h3>
+                        <p class="uk-margin-remove">The website for Kat Gatto.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-width-3-4">
+                <div class="uk-panel">
+                    <img src="{% static 'vizitsite/images/photo2.png' %}" width="1800" height="1200" alt="">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                        <h3 class="uk-margin-remove">Build in Amsterdam</h3>
+                        <p class="uk-margin-remove">The website for Build in Amsterdam.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-width-3-4">
+                <div class="uk-panel">
+                    <img src="{% static 'vizitsite/images/photo3.png' %}" width="1800" height="1200" alt="">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                        <h3 class="uk-margin-remove">Charmer Studio</h3>
+                        <p class="uk-margin-remove">The website for Charmer Studio.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-width-3-4">
+                <div class="uk-panel">
+                    <img src="{% static 'vizitsite/images/photo4.png' %}" width="1800" height="1200" alt="">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                        <h3 class="uk-margin-remove">Rezo Zero</h3>
+                        <p class="uk-margin-remove">The website for Rezo Zero.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-width-3-4">
+                <div class="uk-panel">
+                    <img src="{% static 'vizitsite/images/photo5.png' %}" width="1800" height="1200" alt="">
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                        <h3 class="uk-margin-remove">Balkan Brothers</h3>
+                        <p class="uk-margin-remove">The website for Balkan Brothers.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+    </div>
+</div>
+{% endblock content %}

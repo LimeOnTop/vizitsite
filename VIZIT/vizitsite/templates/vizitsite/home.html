@@ -1,0 +1,35 @@
+{% extends 'vizitsite/index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="uk-container uk-margin-large-top">
+    <div class="uk-margin-xlarge-top">
+        <h1 class="dev-text">Konstantin <span>SHCHEGLOV</span></h1>
+    </div>
+    <div class="uk-display-inline-block">
+        <h2 class="animation dev-text">I am a <span class="dev">Web Developer</span></h2>
+    </div>
+    <div class="uk-flex uk-flex-center">
+        <div class="uk-margin-right">
+            <button class="btn">Contact me</button>
+        </div>
+        <div class="uk-margin-left uk-margin-auto-vertical">
+            <a href="{% url 'portfolio' %}"><h2 class="href">My portfolio</h2></a>
+        </div>
+    </div>
+    <div class="uk-flex uk-child-width-1-2">
+        <div>
+            <img src="{% static 'vizitsite/images/face.png'%}" alt="">
+        </div>
+        <div class="uk-margin-auto-vertical">
+            <h1 class="uk-text-center about">About me</h1>
+            <div class="uk-padding dev-text uk-text-large">
+                <p>I am a freelance developer, I create websites of various types and sizes. I have more than a hundred
+                successful projects, and a large number of satisfied customers. My programming experience is more than
+                five years. If you want to order a website or a design for a website, you can contact me by clicking the
+                button.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
